@@ -11,7 +11,6 @@ let scrollTween = gsap.to(sections, {
         pin: true,
         scrub: 1,
         end: "+=3000",
-        markers: true,
     },
 });
 
@@ -41,10 +40,38 @@ sections.forEach((section) => {
             trigger: section,
             containerAnimation: scrollTween,
             start: "left center",
-            markers: true,
         },
     });
 });
 gsap.defaults({
     ease: "none",
+});
+const panels = gsap.utils.toArray(".panel");
+const length = panels.length;
+panels.forEach((panel, i) => {
+    if (i != length - 1) {
+        ScrollTrigger.create({
+            trigger: panel,
+            start: "top top",
+            end: "30%",
+
+            pin: true,
+            pinSpacing: false,
+        });
+    } else {
+        ScrollTrigger.create({
+            trigger: panel,
+            start: "top top",
+            pin: true,
+            end: "top",
+            pinSpacing: false,
+        });
+    }
+});
+
+gsap.to(".one", {
+    trigger: ".orange",
+    start: "top top",
+    opacity: 0.2,
+    duration: 1,
 });
