@@ -11,14 +11,11 @@ let scrollTween = gsap.to(sections, {
         pin: true,
         scrub: 1,
         end: "+=3000",
-        //snap: 1 / (sections.length - 1),
         markers: true,
     },
 });
 
 console.log(1 / (sections.length - 1));
-
-//Progress bar animation
 
 gsap.to(mask, {
     width: "100%",
@@ -29,15 +26,11 @@ gsap.to(mask, {
     },
 });
 
-// whizz around the sections
 sections.forEach((section) => {
-    // grab the scoped text
     let text = section.querySelectorAll(".anim");
 
-    // bump out if there's no items to animate
     if (text.length === 0) return;
 
-    // do a little stagger
     gsap.from(text, {
         y: -130,
         opacity: 0,

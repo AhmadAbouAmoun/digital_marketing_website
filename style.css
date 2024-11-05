@@ -80,3 +80,66 @@ svg {
 section {
     height: 100vh;
 }
+.sections {
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+.container-page {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: purple;
+    height: 100%;
+}
+.container-page .contento {
+    position: sticky;
+    top: 0;
+}
+
+.one {
+    color: white;
+}
+.two {
+    color: gray;
+}
+.container-page h2 {
+    font-size: 30px;
+}
+.panel {
+    height: 100vh;
+    width: 50%;
+    margin-left: auto;
+}
+
+.description {
+    height: 100vh;
+}
+
+.red {
+    height: 50vh;
+    background-color: grey;
+}
+.orange {
+    height: 50vh;
+    background-color: orange;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background: fuchsia;
+    position: fixed;
+    top: 15vh;
+    left: 0;
+    right: 0;
+    z-index: 1500;
+}
+
+footer {
+    height: 300px;
+    background-color: black;
+    color: #fff;
+    z-index: 10;
+}
