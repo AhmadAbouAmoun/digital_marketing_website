@@ -51,10 +51,6 @@ svg {
         }
     }
 
-    .sec1 {
-        background-image: url("assets/brand_identity.webp");
-        background-size: cover;
-    }
     .sec1 p {
         font-size: 16px;
     }
@@ -98,7 +94,15 @@ svg {
         }
     }
 }
-
+.partner {
+    background-color: #21dadb;
+}
+.deliver {
+    background-color: #35bbdf;
+}
+.methodology {
+    background-color: #4d94e6;
+}
 section {
     height: 100vh;
 }
